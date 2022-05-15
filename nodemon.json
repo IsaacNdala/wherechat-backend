@@ -1,8 +1,5 @@
 {
     "env": {
-        "MONGO_USER": "augustofigueira",
-        "MONGO_PASSWORD": "MrUgM5YuKT4sTgxg",
-        "MONGO_DATABASE": "wherechat",
-        "JWT_SECRET": "verysecretandimportanttokeepinprivate"
+        "JWT_SECRET": "verysecretandimportanttokslkdkskds"
     }
 }

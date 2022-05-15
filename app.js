@@ -7,8 +7,7 @@ const bodyParser = require('body-parser')
 const compression = require('compression')
 const morgan = require('morgan')
 
-const MONGODB_URI = 
-    `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0.2jj3p.mongodb.net/${process.env.MONGO_DATABASE}?retryWrites=true&w=majority`
+const MONGODB_URI = 'mongodb://localhost:27017'
 
 // Importing Routes
 const authRoutes = require('./routes/auth')
