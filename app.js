@@ -35,10 +35,6 @@ app.use((req, res, next) => {
     next()
 })
 
-app.use('/', (req, res, next) => {
-    res.send('<h1>Hello</h1>')
-})
-
 // Using Routes
 app.use('/auth', authRoutes)
 app.use('/user', userRoutes)
