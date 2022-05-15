@@ -13,9 +13,6 @@ The frontend can found [here](https://github.com/IsaacNdala/wherechat/).
 * [Mongoose](https://mongoosejs.com/)
 * [Socket.io](https://socket.io/)
 
-## Live Demo
-[https://wherechat.herokuapp.com/](https://wherechat.herokuapp.com/)
-
 ## Project Setup
 
 1. Clone the repository
