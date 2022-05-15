@@ -2,7 +2,6 @@ const User = require('../models/user')
 const { validationResult } = require('express-validator')
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
-const secret = 'verysecretandimportanttokeepinprivate'
 const UserLocation = require('../models/user-location')
 
 exports.signUp = (req, res, next) => {
@@ -51,7 +50,7 @@ exports.signUp = (req, res, next) => {
             req.userId = loadedUser._id.toString()
             const token = jwt.sign(
                 {email: loadedUser.email, userId: loadedUser._id.toString()},  
-                secret,
+                process.env.JWT_SECRET,
                 { expiresIn: '7d' }
             )
             res.status(201).json({
@@ -108,7 +107,7 @@ exports.signIn = (req, res, next) => {
             req.userId = loadedUser._id.toString()
             const token = jwt.sign(
                 {email: loadedUser.email, userId: loadedUser._id.toString()}, 
-                secret,
+                process.env.JWT_SECRET,
                 { expiresIn: '7d' }
             )
             res.status(200).json({ 
