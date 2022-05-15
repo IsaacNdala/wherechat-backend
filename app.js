@@ -35,7 +35,7 @@ app.use((req, res, next) => {
     next()
 })
 
-app.use('/', (req, res, next) => {
+app.use('/test', (req, res, next) => {
     res.send('<h1>Hello</h1>')
 })
 
