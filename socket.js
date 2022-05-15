@@ -4,7 +4,7 @@ module.exports = {
     init: httpServer => {
         io = require('socket.io')(httpServer, {
             cors: {
-              origin: "https://wherechat.herokuapp.com/",
+              origin: "https://wherechat.herokuapp.com",
               methods: ["GET", "POST"]
             }
         })
