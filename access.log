@@ -3,3 +3,4 @@
 ::1 - - [15/May/2022:14:18:48 +0000] "OPTIONS /user/location HTTP/1.1" 200 8 "http://localhost:8080/" "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1"
 ::1 - - [15/May/2022:14:18:48 +0000] "GET /undefined HTTP/1.1" 404 148 "http://localhost:8080/" "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1"
 ::1 - - [15/May/2022:14:18:48 +0000] "GET /user/location HTTP/1.1" 200 - "http://localhost:8080/" "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1"
+::1 - - [26/Nov/2022:12:59:39 +0000] "GET / HTTP/1.1" 404 139 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"

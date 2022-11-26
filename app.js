@@ -6,8 +6,10 @@ const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const compression = require('compression')
 const morgan = require('morgan')
+require('dotenv').config();
 
-const MONGODB_URI = 'mongodb://localhost:27017'
+const MONGODB_URI = 
+    `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0.2jj3p.mongodb.net/${process.env.MONGO_DATABASE}?retryWrites=true&w=majority`
 
 // Importing Routes
 const authRoutes = require('./routes/auth')
@@ -48,7 +50,11 @@ app.use((error, req, res, next) => {
 
 mongoose.connect(MONGODB_URI)
     .then(result => {
-        const server = app.listen(process.env.PORT || 3000);
+        const server = app.listen(process.env.PORT || 3000, () => {
+            console.log(`
+                Server running on http://localhost:3000
+            `)
+        });
         const io = require('./socket').init(server)
     }).catch(err => {
         console.log(err);
